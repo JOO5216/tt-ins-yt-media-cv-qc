@@ -1,0 +1,26 @@
+[
+  {
+    "command": "python -m unittest test_video_qc -q",
+    "exit_code": 0
+  },
+  {
+    "command": "python tiktok拍同款抓取.py --self-test",
+    "exit_code": 0
+  },
+  {
+    "command": "python tiktok博主图片采集.py --help",
+    "exit_code": 0
+  },
+  {
+    "command": "python tiktok封面水印筛选.py --help",
+    "exit_code": 0
+  },
+  {
+    "command": "python check_media_specs.py --help",
+    "exit_code": 0
+  },
+  {
+    "command": "python face_size_check.py --help",
+    "exit_code": 0
+  }
+]
