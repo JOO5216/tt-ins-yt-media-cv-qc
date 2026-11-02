@@ -25,8 +25,8 @@ python .\tiktok博主图片采集.py profiles.csv --cdp --covers --output output
 仅检查本地视频：
 
 ```powershell
-python .\check_media_specs.py "D:\视频目录"
-python .\face_size_check.py "D:\视频目录"
+python .\规格检查.py "D:\视频目录"
+python .\人脸检查.py "D:\视频目录"
 ```
 
 单独检测图片叠字：
@@ -43,8 +43,8 @@ python .\tiktok封面水印筛选.py "D:\待筛图片" --output "D:\筛选结果
 | tiktok博主图片采集.py | 博主封面下载、InsightFace/OCR/VLM初筛、Excel汇总 |
 | tiktok封面水印筛选.py | OCR文字与区域启发式；也可独立处理图片 |
 | vlm_overlay.py | 延迟加载SmolVLM，判断疑似编辑叠加 |
-| check_media_specs.py | 视频格式、编码、尺寸、帧率、时长及图片规格 |
-| face_size_check.py | YuNet检查视频10%/50%/90%三帧中的人脸尺寸 |
+| 规格检查.py | 视频格式、编码、尺寸、帧率、时长及图片规格 |
+| 人脸检查.py | YuNet检查视频10%/50%/90%三帧中的人脸尺寸 |
 | test_video_qc.py | 9项视频质检回归测试 |
 | profiles.csv | 原始输入，url列 |
 | output_covers/ | 原有最后一轮结果：65张图片、summary.xlsx、passed_videos.csv |

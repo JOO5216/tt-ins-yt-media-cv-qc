@@ -16,11 +16,11 @@
     "exit_code": 0
   },
   {
-    "command": "python check_media_specs.py --help",
+    "command": "python 规格检查.py --help",
     "exit_code": 0
   },
   {
-    "command": "python face_size_check.py --help",
+    "command": "python 人脸检查.py --help",
     "exit_code": 0
   }
 ]

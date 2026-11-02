@@ -7,9 +7,9 @@
 在 PowerShell 中运行，将示例路径替换为实际路径：
 
 ```powershell
-python .\check_media_specs.py "D:\素材目录"
-python .\face_size_check.py "D:\素材目录"
-python .\face_size_check.py "D:\视频链接.csv"
+python .\规格检查.py "D:\素材目录"
+python .\人脸检查.py "D:\素材目录"
+python .\人脸检查.py "D:\视频链接.csv"
 ```
 
 人脸脚本也接受单个视频、单个 TikTok URL、TXT 链接清单，或无参数启动后交互输入。CSV 优先读取“视频链接”列。

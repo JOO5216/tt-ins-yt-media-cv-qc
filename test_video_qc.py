@@ -7,8 +7,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
-import check_media_specs as specs
-import face_size_check as face
+import 规格检查 as specs
+import 人脸检查 as face
 
 
 class QualityChecks(unittest.TestCase):
@@ -27,7 +27,7 @@ class QualityChecks(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             (root/'a.mp4').touch(); (root/'b.mp4').touch()
-            with patch('sys.argv', ['check_media_specs.py', temp]), \
+            with patch('sys.argv', ['规格检查.py', temp]), \
                     patch.object(specs.shutil, 'which', return_value='ffprobe'), \
                     patch.object(specs, 'check_video', side_effect=[(True, 'valid', []), KeyboardInterrupt()]):
                 with self.assertRaises(KeyboardInterrupt):
@@ -96,7 +96,7 @@ class QualityChecks(unittest.TestCase):
             return 'a.mp4', 5, '合格', [('前', .5, 140, 140, .9, '合格', root/'frame.jpg')]
 
         fake_cv = SimpleNamespace(FaceDetectorYN=SimpleNamespace(create=lambda *a: None))
-        with patch('sys.argv', ['face_size_check.py', str(root)]), \
+        with patch('sys.argv', ['人脸检查.py', str(root)]), \
                 patch.object(face, 'require_tools', return_value=fake_cv), \
                 patch.object(face, 'ensure_model'), patch.object(face, 'check_video', side_effect=check):
             return face.main()
