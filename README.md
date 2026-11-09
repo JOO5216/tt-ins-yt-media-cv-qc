@@ -1,6 +1,7 @@
 # tt-ins-yt-media-cv-qc
 
 tt-ins-url-crawler 仓库的功能完善版
+
 TikTok 同款发现、博主封面采集、图片初筛及本地视频技术规格/人脸尺寸检查工具集。当前不包含 Instagram 或 YouTube 专用采集器。
 
 **详细模块结构、阈值、技术难题、数据衔接、已知缺陷与效果边界，请阅读[流程说明](流程说明.md)。** 视频专项操作见[VIDEO_QC_README](VIDEO_QC_README.md)。
